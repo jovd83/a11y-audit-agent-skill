@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: A11y Audit Agent Skill
+  short_description: Hybrid accessibility audits with route discovery, normalized findings, and reports.
+  default_prompt: Audit a website or application for accessibility, combining automated findings with manual verification and producing remediation-ready outputs.

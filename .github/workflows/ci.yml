@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate skill structure
+        run: node scripts/validate-skill.js
+
+      - name: Validate sample results
+        run: node scripts/validate-results.js examples/sample-audit-results.json
+
+      - name: Run tests
+        run: npm test
+
+      - name: Generate sample report
+        run: node scripts/generate-html-report.js examples/sample-audit-results.json sandbox/ci-sample-report.html

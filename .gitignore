@@ -1,0 +1,7 @@
+node_modules/
+sandbox/
+dist/
+coverage/
+*.log
+*.tmp
+*.bak
