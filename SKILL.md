@@ -2,8 +2,10 @@
 name: a11y-audit-agent-skill
 description: Run structured accessibility audits for websites and web applications using a hybrid workflow: scope representative pages, run automated scanners, perform manual verification, and deliver remediation-ready reports. Use when Codex needs to assess WCAG compliance, Section 508 or EN 301 549 alignment, accessibility risk on a page or app, or produce developer/stakeholder audit artifacts with evidence.
 metadata:
+    dispatcher-layer: execution
+    dispatcher-lifecycle: active
   author: jovd83
-  version: "1.0.0"
+  version: "1.1.0"
   dispatcher-output-artifacts: accessibility_findings, remediation_report, stakeholder_summary
   dispatcher-risk: medium
   dispatcher-writes-files: true
@@ -16,6 +18,12 @@ metadata:
 # Accessibility Audit
 
 Use this skill to produce evidence-based accessibility audits without overstating what automation can prove.
+
+
+## Telemetry & Logging
+> [!IMPORTANT]
+> All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
+> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
 
 ## Core Rules
 
