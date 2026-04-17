@@ -15,15 +15,15 @@ metadata:
   dispatcher-accepted-intents: run_accessibility_audit, review_wcag_compliance, generate_accessibility_report
   dispatcher-category: testing
 ---
-# Accessibility Audit
-
-Use this skill to produce evidence-based accessibility audits without overstating what automation can prove.
-
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+
+# Accessibility Audit
+
+Use this skill to produce evidence-based accessibility audits without overstating what automation can prove.
 
 ## Core Rules
 
