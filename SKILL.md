@@ -1,6 +1,6 @@
 ---
 name: a11y-audit-agent-skill
-description: Run structured accessibility audits for websites and web apps via hybrid workflow: scope pages, run automated scanners, perform manual verification, and deliver remediation-ready reports. Use to assess WCAG, Section 508, or EN 301 549 compliance, or produce developer/stakeholder audit artifacts with evidence.
+description: "Run structured accessibility audits for websites and web apps via hybrid workflow: scope pages, run automated scanners, perform manual verification, and deliver remediation-ready reports. Use to assess WCAG, Section 508, or EN 301 549 compliance, or produce developer/stakeholder audit artifacts with evidence."
 metadata:
   dispatcher-layer: feedback
   dispatcher-lifecycle: active
