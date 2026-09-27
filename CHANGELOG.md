@@ -7,6 +7,7 @@ All notable changes to this repository are documented here.
 ### Changed
 - `context: fork`: in Claude Code the skill runs in a forked subagent, so its scans and tool output stay out of the main conversation and only the result comes back.
 - New "Forked Run" section: take the scope from the invocation arguments, state assumptions instead of asking mid-run, and end with a summary plus the paths of the written files.
+- `package.json` and `package-lock.json` realigned to the release version. They said 2.0.0 since the initial commit; the package is private and was never published under that number.
 
 ## [1.1.1] - 2026-04-30
 

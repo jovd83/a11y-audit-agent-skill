@@ -1,6 +1,6 @@
 {
   "name": "a11y-audit-agent-skill",
-  "version": "2.0.0",
+  "version": "1.2.0",
   "description": "AgentSkill for structured accessibility audits with route discovery, normalized findings, reporting, and validation.",
   "license": "MIT",
   "private": true,
