@@ -1,6 +1,7 @@
 ---
 name: a11y-audit-agent-skill
 description: "Run structured accessibility audits for websites and web apps via hybrid workflow: scope pages, run automated scanners, perform manual verification, and deliver remediation-ready reports. Use to assess WCAG, Section 508, or EN 301 549 compliance, or produce developer/stakeholder audit artifacts with evidence."
+context: fork
 metadata:
   dispatcher-layer: feedback
   dispatcher-lifecycle: active
@@ -17,10 +18,20 @@ metadata:
 
 # Accessibility Audit
 
-> **Author:** jovd83 | **Version:** 1.1.1
+> **Author:** jovd83 | **Version:** 1.2.0
 
 
 Use this skill to produce evidence-based accessibility audits without overstating what automation can prove.
+
+## Forked Run
+
+In Claude Code this skill runs in a forked subagent (`context: fork`). It starts without the conversation history and cannot ask the user anything mid-run, so:
+
+- Take the target, scope and output location from the invocation arguments. When one is missing, use the defaults in this file and state the assumption in the result instead of asking.
+- Keep verbose tool output (scanner logs, file dumps) inside this run. When the report is long, write it to the output location this file defines, or to a file you name in the result.
+- End with a final message the main conversation can act on: the verdict or summary, the most important findings, and the path of every file written.
+
+Other harnesses load this file inline; there the workflow below applies unchanged, including any questions it asks.
 
 ## Core Rules
 
