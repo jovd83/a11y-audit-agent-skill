@@ -47,7 +47,7 @@ Other harnesses load this file inline; there the workflow below applies unchange
 
 - Runtime memory: current audit scope, notes, tool outputs, and evidence
 - Project-local memory: local fixtures, approved route inventories, or saved baselines in this repo
-- Shared memory: out of scope unless the user explicitly asks to promote stable cross-project conventions through a separate shared-memory skill
+- Shared memory: out of scope unless the user explicitly asks to promote stable cross-project conventions; those go to the agent's own memory (for example CLAUDE.md or AGENTS.md), not into this skill
 
 Do not automatically promote runtime observations into persistent storage.
 
